@@ -1,6 +1,6 @@
 import './App.css';
-import ComponentExercise from './component-exercise'
-
+import ComponentExercise from './component-exercise';
+import CovidUpdate from './covid-update';
 
 function App() {
   const fname = "Vicky";
@@ -55,6 +55,7 @@ function App() {
       </h1>
 
       <ComponentExercise />
+      <CovidUpdate />
     </>
   );
 }
