@@ -23,6 +23,7 @@ const CovidUpdate = () => {
   useEffect(() => {
     getCovidDate();
   },[]);
+
   return (
     <div>
       <h4>Live</h4>
