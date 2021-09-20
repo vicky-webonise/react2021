@@ -53,9 +53,9 @@ const Netflix = function () {
         />
         <Card
           imgsrc={MockData[0].imgsrc}
-          title="A Netflix Series"
+          title={MockData[0].title}
           sname={MockData[0].sname}
-          link="http://google.com"
+          link={MockData[0].link}
           cName="drf"
         />
       </ol>
@@ -79,9 +79,14 @@ const Netflix = function () {
 
       <h3>FAT ARROW Function</h3>
       <ol>
-        {MockData.map((val, index) => {
+        {MockData.map((val, index, arr) => {
+          {
+            /* console.log("arr " + arr); */
+          }
           console.log("index " + index);
-          {/* console.log("val" + val); */}
+          {
+            /* console.log("val" + val); */
+          }
           return (
             <Card
               key={index}
