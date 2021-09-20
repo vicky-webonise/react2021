@@ -3,13 +3,16 @@ import CardImage from './card-image';
 function Card(props) {
   // console.log(props);
   return (
-    <li className={props.cName}>
-      <img src={props.imgsrc} alt="Alt Tag" />
-      <CardImage imgsrc={props.imgsrc} />
-      <h2>{props.title}</h2>
-      <h4>{props.sname}</h4>
-      <a href={props.link}>Watch</a>
-    </li>
+    <div class="card">
+      <CardImage imgsrc={props.imgsrc} alt="Alt Tag" />
+      <div class="card-body">
+        <h5 class="card-title">{props.title}</h5>
+        <p class="card-text">{props.title}</p>
+        <a href={props.link} class="btn btn-primary">
+          Watch
+        </a>
+      </div>
+    </div>
   );
 };
 

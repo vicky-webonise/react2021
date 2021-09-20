@@ -1,6 +1,6 @@
 const MockData = [
   {
-    imgsrc: "https://picsum.photos/100/100",
+    imgsrc: "https://picsum.photos/100/50",
     title: "A Netflix Series",
     sname: "DARK1",
     link: "http://google.com",
@@ -14,14 +14,14 @@ const MockData = [
     cName: "abc",
   },
   {
-    imgsrc: "https://picsum.photos/100/75",
+    imgsrc: "https://picsum.photos/100/50",
     title: "A Netflix Series",
     sname: "DARK3",
     link: "http://google.com",
     cName: "abc",
   },
   {
-    imgsrc: "https://picsum.photos/100/20",
+    imgsrc: "https://picsum.photos/100/50",
     title: "A Netflix Series",
     sname: "DARK4",
     link: "http://google.com",

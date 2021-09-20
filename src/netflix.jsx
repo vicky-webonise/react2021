@@ -23,44 +23,52 @@ const Netflix = function () {
   const nCard =(val, index) => {
     console.log("val" + val);
     return (
-      <Card
-        key={index}
-        imgsrc={val.imgsrc}
-        title={val.title}
-        sname={val.sname}
-        link={val.link}
-        cName={val.cName}
-      />
+      <div className="col-3">
+        <Card
+          key={index}
+          imgsrc={val.imgsrc}
+          title={val.title}
+          sname={val.sname}
+          link={val.link}
+          cName={val.cName}
+        />
+      </div>
     );
   }
 
   return (
     <>
-      <ol>
-        <Card
-          imgsrc="https://picsum.photos/200/100"
-          title="A Netflix Series"
-          sname="DARK"
-          link="http://google.com"
-          cName="abc"
-        />
-        <Card
-          imgsrc="https://picsum.photos/200/100"
-          title="A Netflix Series"
-          sname="DARK"
-          link="http://google.com"
-          cName="xyz"
-        />
-        <Card
-          imgsrc={MockData[0].imgsrc}
-          title={MockData[0].title}
-          sname={MockData[0].sname}
-          link={MockData[0].link}
-          cName="drf"
-        />
-      </ol>
+      <div className="row">
+        <div className="col-3">
+          <Card
+            imgsrc="https://picsum.photos/100/50"
+            title="A Netflix Series"
+            sname="DARK"
+            link="http://google.com"
+            cName="abc"
+          />
+        </div>
+        <div className="col-3">
+          <Card
+            imgsrc="https://picsum.photos/100/50"
+            title="A Netflix Series"
+            sname="DARK"
+            link="http://google.com"
+            cName="xyz"
+          />
+        </div>
+        <div className="col-3">
+          <Card
+            imgsrc={MockData[0].imgsrc}
+            title={MockData[0].title}
+            sname={MockData[0].sname}
+            link={MockData[0].link}
+            cName="drf"
+          />
+        </div>
+      </div>
       <h3>Map</h3>
-      <ol>{MockData.map(nCard)}</ol>
+      <div className="row">{MockData.map(nCard)}</div>
       {/* <ol>
         {MockData.map(function nCard(val, index) {
           console.log("val" + val);
@@ -78,27 +86,25 @@ const Netflix = function () {
       </ol> */}
 
       <h3>FAT ARROW Function</h3>
-      <ol>
+      <div className="row">
         {MockData.map((val, index, arr) => {
-          {
-            /* console.log("arr " + arr); */
-          }
+          console.log("arr " + arr);
           console.log("index " + index);
-          {
-            /* console.log("val" + val); */
-          }
+          console.log("val" + val);
           return (
-            <Card
-              key={index}
-              imgsrc={val.imgsrc}
-              title={val.title}
-              sname={val.sname}
-              link={val.link}
-              cName={val.cName}
-            />
+            <div className="col-3">
+              <Card
+                key={index}
+                imgsrc={val.imgsrc}
+                title={val.title}
+                sname={val.sname}
+                link={val.link}
+                cName={val.cName}
+              />
+            </div>
           );
         })}
-      </ol>
+      </div>
     </>
   );
 }

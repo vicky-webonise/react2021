@@ -16,3 +16,7 @@ code {
   width: 800px;
   margin: 20px auto;
 }
+
+.section {
+  min-height: 100vh;
+}

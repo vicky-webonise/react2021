@@ -40,32 +40,50 @@ function App() {
 
   return (
     <>
-      <p contentEditable="true">
-        My name is {fname} {lname}
-      </p>
-      <p style={{ color: "red", textTransform: "uppercase" }}>
-        My name is {fname + " " + lname}{" "}
-      </p>
-      <p style={styleObj}>My name is {`${fname} ${lname}`} </p>
-      <p>Current Date is = {currDate}</p>
-      <p>Current Time is = {currTime}</p>
-      <a href={link} target="_blank" rel="noreferrer">
-        <img src={img1} alt="Alt Tag" />
-      </a>
-      <h1>
-        Hello Friend, <span style={greetStyle}>{greeting}</span> {greetTime}
-      </h1>
+      <div className="section">
+        <p contentEditable="true">
+          My name is {fname} {lname}
+        </p>
+        <p style={{ color: "red", textTransform: "uppercase" }}>
+          My name is {fname + " " + lname}{" "}
+        </p>
+        <p style={styleObj}>My name is {`${fname} ${lname}`} </p>
+      </div>
+      <div className="section">
+        <p>Current Date is = {currDate}</p>
+        <p>Current Time is = {currTime}</p>
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={img1} alt="Alt Tag" />
+        </a>
+        <h1>
+          Hello Friend, <span style={greetStyle}>{greeting}</span> {greetTime}
+        </h1>
+      </div>
 
-      <ComponentExercise />
-      <CovidUpdate />
-      <h3>Simple calc</h3>
-      <ul>
-        <li>Sum = {add(10, 20)}</li>
-        <li>sub = {sub(10, 20)}</li>
-        <li>mult = {mult(10, 20)}</li>
-        <li>div = {div(10, 3)}</li>
-      </ul>
-      <Netflix />
+      <div className="section">
+        <ComponentExercise />
+      </div>
+      <div className="section">
+        <CovidUpdate />
+      </div>
+      <div className="section">
+        <h3>Simple calc</h3>
+        <ul>
+          <li>Sum = {add(10, 20)}</li>
+          <li>sub = {sub(10, 20)}</li>
+          <li>mult = {mult(10, 20)}</li>
+          <li>div = {div(10, 3)}</li>
+        </ul>
+      </div>
+      <div className="section">
+        <Netflix />
+      </div>
+      <div className="section">
+        <h3>If Else Statement</h3>
+        <h3>React Conditional Rendering | Ternary Operator </h3>
+        {true ? "Agreed" : "Disagreed"}
+        {true && <div>true</div>}
+      </div>
     </>
   );
 }
