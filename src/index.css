@@ -13,10 +13,15 @@ code {
 }
 
 #root {
-  width: 800px;
+  width: 1000px;
   margin: 20px auto;
 }
 
 .section {
   min-height: 100vh;
+  padding: 20px;
+  background-color:cornsilk;
+}
+.section:nth-child(odd) {
+  background-color: aliceblue;
 }

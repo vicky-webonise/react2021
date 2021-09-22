@@ -3,6 +3,15 @@ import ComponentExercise from './component-exercise';
 import CovidUpdate from './covid-update';
 import {add, sub, mult, div } from './calc';
 import Netflix from './netflix';
+import SlotMachineGame from "./SlotMachineGame";
+
+
+const TernaryComponent1 = function () {
+  return <h1>If</h1>
+}
+const TernaryComponent2 = function () {
+  return <h1>else</h1>
+}
 
 function App() {
   const fname = "Vicky";
@@ -82,7 +91,12 @@ function App() {
         <h3>If Else Statement</h3>
         <h3>React Conditional Rendering | Ternary Operator </h3>
         {true ? "Agreed" : "Disagreed"}
+        {false ? <TernaryComponent1 /> : <TernaryComponent2 />}
         {true && <div>true</div>}
+        {true && <TernaryComponent1 />}
+      </div>
+      <div className="section">
+        <SlotMachineGame />
       </div>
     </>
   );
