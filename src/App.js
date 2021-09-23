@@ -4,6 +4,7 @@ import CovidUpdate from './covid-update';
 import {add, sub, mult, div } from './calc';
 import Netflix from './netflix';
 import SlotMachineGame from "./SlotMachineGame";
+import Hooks from './Hooks';
 
 
 const TernaryComponent1 = function () {
@@ -97,6 +98,9 @@ function App() {
       </div>
       <div className="section">
         <SlotMachineGame />
+      </div>
+      <div className="section">
+        <Hooks />
       </div>
     </>
   );

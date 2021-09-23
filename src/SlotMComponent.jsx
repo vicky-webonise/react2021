@@ -7,6 +7,25 @@ const SlotM = (props) => {
   let y = props.y;
   let z = props.z;
 
+//   {x === y && y === z ? (
+//     <>
+//       <h4>
+//         {x} {y} {z}
+//       </h4>
+//       <h3>Matching</h3>
+//       <hr />
+//     </>
+//   ) : (
+//     <>
+//       <h4>
+//         {x} {y} {z}
+//       </h4>
+//       <h3>Not Matching</h3>
+//       <hr />
+//     </>
+//   );
+// }
+
   if (x === y && y === z) {
     return (
       <>

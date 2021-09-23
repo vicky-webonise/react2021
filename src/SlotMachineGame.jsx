@@ -38,7 +38,7 @@ const SlotMachineGame = () => {
     <>
       <h2>Slot Machine Game</h2>
       <SlotM x="vicky" y="vicky" z="vicky" />
-      <SlotM x="Sharvari" y="vicky" z="vicky" />
+      <SlotM x="Sharvari" y="Sharvari" z="Sharvari" />
       <SlotM x="Ayush" y="vicky" z="vicky" />
       <SlotM x="Piyush" y="vicky" z="vicky" />
     </>
