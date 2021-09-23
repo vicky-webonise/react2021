@@ -21,6 +21,10 @@ code {
   min-height: 100vh;
   padding: 20px;
   background-color:cornsilk;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 .section:nth-child(odd) {
   background-color: aliceblue;

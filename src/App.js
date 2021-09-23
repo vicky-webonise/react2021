@@ -5,7 +5,8 @@ import {add, sub, mult, div } from './calc';
 import Netflix from './netflix';
 import SlotMachineGame from "./SlotMachineGame";
 import Hooks from './Hooks';
-
+import HandlingEvents from './handlingEvents';
+import Form from "./form";
 
 const TernaryComponent1 = function () {
   return <h1>If</h1>
@@ -101,6 +102,12 @@ function App() {
       </div>
       <div className="section">
         <Hooks />
+      </div>
+      <div className="section">
+        <HandlingEvents />
+      </div>
+      <div className="section">
+        <Form />
       </div>
     </>
   );
