@@ -12,11 +12,6 @@ code {
     monospace;
 }
 
-#root {
-  width: 1000px;
-  margin: 20px auto;
-}
-
 .section {
   min-height: 100vh;
   padding: 20px;
