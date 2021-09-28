@@ -9,6 +9,46 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/liveSearchFilter"
+        >
+          Live Search Filter
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/weatherApp"
+        >
+          Weather App
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/todoapp"
+        >
+          To Do App
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/filterGallery"
+        >
+          Filter Gallery
+        </NavLink>
+      </li>
+      <li className="nav-item">
         <NavLink exact className="nav-link" activeClassName="active" to="/form">
           Form
         </NavLink>
@@ -101,6 +141,66 @@ const NavBar = () => {
           to="/ifElseTernery"
         >
           If Else Ternery
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/routeRenderMethod"
+        >
+          Route Render Method and Component Prop
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/useParamsHooks/vicky"
+        >
+          useParams Hooks
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/useParamsHooks/Shinde"
+        >
+          useParams Hooks
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/useParamsHooksTwo/vicky/shinde"
+        >
+          Tow useParams Hooks
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/hooksuseLocation/vicky/shinde"
+        >
+          useLocation Hooks
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          exact
+          className="nav-link"
+          activeClassName="active"
+          to="/hooksuseHistory/vicky/shinde"
+        >
+          useHistory Hooks
         </NavLink>
       </li>
     </ul>
