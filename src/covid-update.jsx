@@ -27,7 +27,7 @@ const CovidUpdate = () => {
   return (
     <div>
       <h3>Live - Covid-19 Corona Virus Tracker</h3>
-      <table class="table table-striped table-dark">
+      <table className="table table-striped table-dark">
         <thead>
           <tr>
             <th scope="col">#</th>

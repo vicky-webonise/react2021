@@ -26,10 +26,14 @@ import ToDoApp from "./ToDoApp";
 import ToDoAppAdvance from "./ToDoAppAdvance";
 import FilterGallery from "./FilterGallery";
 
+import HooksComponent from "./components/hooks/HooksComponent";
+import LoginForm from "./components/hooks/LoginForm";
+import HooksUseEffect from "./components/hooks/HooksUseEffect";
+
 function App() {
   return (
-    <div className="container-fluid">
-      <div className="row">
+    <div className="pageWrap">
+      <div className="row no-gutters">
         <div className="col-2">
           <NavBar />
         </div>
@@ -44,12 +48,18 @@ function App() {
               <Route path="/" component={Home} exact />
               <Route path="/handlingEvents" component={HandlingEvents} />
               <Route path="/hooks" component={Hooks} />
+              <Route path="/HooksComponent" component={HooksComponent} />
+              <Route path="/HooksUseEffect" component={HooksUseEffect} />
               <Route path="/form" component={Form} />
+              <Route path="/loginForm" component={LoginForm} />
               <Route path="/componentExerciser" component={ComponentExercise} />
               <Route path="/netflix" component={Netflix} />
               <Route path="/slotMachineGame" component={SlotMachineGame} />
               <Route path="/simpleCalc" component={SimpleCalc} />
-              <Route path="/greeting" component={Greeting} />
+              <Route
+                path="/greeting"
+                component={() => <Greeting fName="Vicky" lName="Shinde" />}
+              />
               <Route path="/ifElseTernery" component={IfElseTernery} />
               <Route path="/useParamsHooks/:fname" component={useParamsHooks} />
               <Route

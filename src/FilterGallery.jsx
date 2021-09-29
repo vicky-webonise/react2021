@@ -14,7 +14,7 @@ const FilterGallery = () => {
   const allCateHead = ['all', ...new Set(Menu.map((item, index) => {return item.category;}))];
 
   // console.log(allCateHead);
-  const [cateHead, setCateHead] = useState(allCateHead);
+  const [cateHead] = useState(allCateHead);
 
   const [activeTab, setActiveTab] = useState('all');
 

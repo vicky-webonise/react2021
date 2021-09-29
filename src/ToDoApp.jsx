@@ -53,7 +53,7 @@ const ToDoApp = () => {
   }, [items]);
 
   return (
-    <>
+    <div>
       <h1>ToDo App</h1>
       <div className="form-inline">
         <div className="form-group mx-sm-3 mb-2">
@@ -72,12 +72,18 @@ const ToDoApp = () => {
           Add
         </button>
       </div>
-      <ul className="list-group">
+      <ul className="list-group mb-4">
         {items.map((item, index) => {
           return (
-            <li key={index} className="">
+            <li
+              key={index}
+              className="d-flex justify-content-between list-group-item text-success"
+            >
               {item}
-              <span onClick={() => deleteItem(index)} className="">
+              <span
+                onClick={() => deleteItem(index)}
+                className="btn btn-warning btn-sm"
+              >
                 Deleted
               </span>
             </li>
@@ -86,9 +92,13 @@ const ToDoApp = () => {
         {/* {items.map = (item, index)=> {
         }} */}
       </ul>
-      <button className="btn btn-primary mb-2" onClick={removeAll}>
-        Delete All
-      </button>
+      {items.length ? (
+        <button className="btn btn-primary mb-2" onClick={removeAll}>
+          Delete All
+        </button>
+      ) : (
+        ""
+      )}
       <hr />
       <NavLink
         exact
@@ -98,7 +108,7 @@ const ToDoApp = () => {
       >
         To Do App Advance - Edit, Update
       </NavLink>
-    </>
+    </div>
   );
 };
 

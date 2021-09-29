@@ -1,5 +1,5 @@
 
-const Greeting = () => {
+const Greeting = ({fName, lName}) => {
   const currDate = new Date().toLocaleDateString();
   const currTime = new Date().toLocaleTimeString();
 
@@ -24,6 +24,13 @@ const Greeting = () => {
     greeting = "good night !";
     greetStyle.color = "red";
   }
+
+  const styleObj = {
+    color: "blue",
+    textTransform: "uppercase",
+    fontWeight: "bold",
+  };
+
   return (
     <>
       <p>Current Date is = {currDate}</p>
@@ -32,8 +39,16 @@ const Greeting = () => {
         <img src={img1} alt="Alt Tag" />
       </a>
       <h1>
-        Hello Friend, <span style={greetStyle}>{greeting}</span> {greetTime}
+        Hello {fName} {lName}, <span style={greetStyle}>{greeting}</span>{" "}
+        {greetTime}
       </h1>
+      {/* <p contentEditable="true">
+        My name is {fName} {lName}
+      </p> */}
+      <p style={{ color: "red", textTransform: "uppercase" }}>
+        My name is {fName + " " + lName}{" "}
+      </p>
+      <p style={styleObj}>My name is {`${fName} ${lName}`} </p>
     </>
   );
 };

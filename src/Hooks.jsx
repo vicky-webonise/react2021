@@ -34,11 +34,15 @@ const Hooks = () => {
     <div>
       <h3>Hooks</h3>
       <h1> {count} </h1>
-      <button onClick={incNum}>Click</button>
+      <button className="btn btn-warning" onClick={incNum}>
+        Click
+      </button>
       <hr />
       <h3>Get Time on Refreshing and Clicking Button using useState Hook</h3>
       <h1> {currTime} </h1>
-      <button onClick={updateTime}>Click</button>
+      <button className="btn btn-warning" onClick={updateTime}>
+        Click
+      </button>
       <hr />
       <h3>Digital Clock </h3>
       <h1> {digiTime} </h1>

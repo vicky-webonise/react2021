@@ -77,7 +77,7 @@ const ToDoAppAdvance = () => {
   }, [items]);
 
   return (
-    <>
+    <div>
       <h1>ToDo App</h1>
       <div className="form-inline">
         <div className="form-group mx-sm-3 mb-2">
@@ -102,16 +102,25 @@ const ToDoAppAdvance = () => {
           </button>
         )}
       </div>
-      <ul className="list-group">
+      <ul className="list-group mb-4">
         {items.map((item) => {
           return (
-            <li key={item.id} className="d-flex justify-content-between">
+            <li
+              key={item.id}
+              className="d-flex justify-content-between list-group-item text-success"
+            >
               <div>{item.name}</div>
               <div>
-                <span onClick={() => editItem(item.id)} className="">
+                <span
+                  onClick={() => editItem(item.id)}
+                  className="btn btn-warning btn-sm mr-2"
+                >
                   Edit{" "}
                 </span>
-                <span onClick={() => deleteItem(item.id)} className="">
+                <span
+                  onClick={() => deleteItem(item.id)}
+                  className="btn btn-primary btn-sm"
+                >
                   Deleted
                 </span>
               </div>
@@ -121,10 +130,14 @@ const ToDoAppAdvance = () => {
         {/* {items.map = (item, index)=> {
         }} */}
       </ul>
-      <button className="btn btn-primary mb-2" onClick={removeAll}>
-        Delete All
-      </button>
-    </>
+      {items.length ? (
+        <button className="btn btn-primary mb-2" onClick={removeAll}>
+          Delete All
+        </button>
+      ) : (
+        ""
+      )}
+    </div>
   );
 };
 

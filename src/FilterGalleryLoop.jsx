@@ -8,9 +8,9 @@ const FilterGalleryLoop = ({filterGalleryData}) => {
           const { imgsrc, title, disc, link, category } = item;
           return (
             <div key={index} className="col-3 mb-4">
-              <h3>
+              <h5>
                 <a href={link}>{title}</a>
-              </h3>
+              </h5>
               <p>{category}</p>
               <img className="img-fluid" src={imgsrc} alt={title} />
               {disc}
