@@ -29,6 +29,7 @@ import FilterGallery from "./FilterGallery";
 import HooksComponent from "./components/hooks/HooksComponent";
 import LoginForm from "./components/hooks/LoginForm";
 import HooksUseEffect from "./components/hooks/HooksUseEffect";
+import HookUseEffectApi from "./components/hooks/HooksUseEffectApi";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
               <Route path="/" component={Home} exact />
               <Route path="/handlingEvents" component={HandlingEvents} />
               <Route path="/hooks" component={Hooks} />
+              <Route path="/hookUseEffectApi" component={HookUseEffectApi} />
               <Route path="/HooksComponent" component={HooksComponent} />
               <Route path="/HooksUseEffect" component={HooksUseEffect} />
               <Route path="/form" component={Form} />

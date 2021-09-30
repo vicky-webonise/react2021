@@ -14,7 +14,7 @@ const LiveSearchFilter = () => {
 
   return (
     <>
-      <h3>Live Search Filter</h3>
+      <h3>Live Image Search Filter</h3>
       <div className="form-group">
         <label>Search</label>
         <input

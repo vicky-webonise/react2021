@@ -46,7 +46,8 @@ const NavBar = () => {
             activeClassName="active"
             to="/todoAppAdvance"
           >
-            To Do App Advance - <br />Edit, Update, localStorage
+            To Do App Advance - <br />
+            Edit, Update, localStorage
           </NavLink>
         </li>
         <li className="nav-item">
@@ -117,6 +118,16 @@ const NavBar = () => {
             to="/hooks"
           >
             Hooks
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/hookUseEffectApi"
+          >
+            Hook UseEffect Api
           </NavLink>
         </li>
         <li className="nav-item">
