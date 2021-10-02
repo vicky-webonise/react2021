@@ -33,12 +33,9 @@ const FormLogin = () => {
     <div>
       <h3>Form</h3>
       <form onSubmit={showName}>
-        <h2>
-          Hello {name} {pass}{" "}
-        </h2>
-        <h2>
-          Hello {onSubmitName} {onSubmitPass}
-        </h2>
+        <p>
+          Hello {name} {pass}
+        </p>
         <div className="form-group">
           <label>Name</label>
           <input
@@ -48,27 +45,24 @@ const FormLogin = () => {
             onChange={nameInputEvent}
             value={name}
           />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
         </div>
         <div className="form-group">
           <label>Password</label>
           <input
             type="text"
             className="form-control"
-            placeholder="Name"
+            placeholder="Password"
             onChange={passInputEvent}
             value={pass}
           />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
+      <p className="mt-5">
+        {onSubmitName} {onSubmitPass}
+      </p>
     </div>
   );
 };

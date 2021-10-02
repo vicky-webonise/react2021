@@ -1,10 +1,8 @@
-import Greeting from "./Greeting";
+import Greeting from "./components/Greeting/Greeting";
 
 const Home = () => {
   const fName = "Jon";
   const lName = "Deo";
-
-
 
   return (
     <>

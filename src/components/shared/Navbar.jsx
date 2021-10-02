@@ -125,9 +125,39 @@ const NavBar = () => {
             exact
             className="nav-link"
             activeClassName="active"
-            to="/hookUseEffectApi"
+            to="/hooksUseEffectApi"
           >
-            Hook UseEffect Api
+            Hooks UseEffect Api
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/hooksUseReducer"
+          >
+            Hooks UseReducer
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/hooksUseContext"
+          >
+            Hooks UseContext
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/customHooks"
+          >
+            Custom Hooks
           </NavLink>
         </li>
         <li className="nav-item">

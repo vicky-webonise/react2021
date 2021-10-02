@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import FilterGalleryTab from "./FilterGalleryTab";
 import FilterGalleryLoop from "./FilterGalleryLoop";
-import Menu from './mockData/filterGalleryData'
+import Menu from '../../mockData/filterGalleryData'
 
 const FilterGallery = () => {
 

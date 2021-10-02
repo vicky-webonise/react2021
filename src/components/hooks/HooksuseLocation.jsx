@@ -15,6 +15,10 @@ const HooksuseLocation = () => {
         Current location is <br />
         {location.pathname}
       </p>
+      <p>
+        Current location is <br />
+        {location.pathname.replace("/", " ")}
+      </p>
       {location.pathname === `/hooksuseLocation/vicky/shinde` ? (
         <button
           className="btn btn-warning"

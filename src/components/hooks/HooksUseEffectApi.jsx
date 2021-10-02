@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Loading from '../../Loading';
+import Loading from '../shared/Loading';
 
-const HookUseEffectApi = () => {
+const HooksUseEffectApi = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -59,7 +59,7 @@ const HookUseEffectApi = () => {
   );
 }
 
-export default HookUseEffectApi;
+export default HooksUseEffectApi;
 
 
 const UserLoop = ({ users }) => {

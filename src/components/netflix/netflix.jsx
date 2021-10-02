@@ -1,5 +1,5 @@
 import Card from "./card";
-import MockData from "./mockData";
+import MockData from "../../mockData/netflixData";
 
 
 const Netflix = function () {

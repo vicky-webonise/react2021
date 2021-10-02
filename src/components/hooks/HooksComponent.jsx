@@ -60,7 +60,7 @@ const HooksComponent = () => {
         );
       })}
       <button onClick={clearAll} type="button" className="btn btn-warning">
-        All
+        Clear All
       </button>
       <hr />
       <h1>spread operator {`{...}`} & Handle Objects</h1>

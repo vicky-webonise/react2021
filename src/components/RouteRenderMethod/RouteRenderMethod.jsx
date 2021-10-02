@@ -7,7 +7,6 @@ const RouteRenderMethod = ({name, surname, age}) => {
       <h2>age : {age}</h2>
     </>
   );
-
 }
 
 export default RouteRenderMethod;

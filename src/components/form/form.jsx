@@ -21,12 +21,11 @@ const Form = () => {
   };
 
   return (
-    <div className="row">
+    <div className="row text-left">
       <div className="col">
         <h3>Form</h3>
         <form onSubmit={showName}>
-          <h2>Hello {name} </h2>
-          <h2>Hello {onSubmitName} </h2>
+          <p>Hello {name} </p>
           <div className="form-group">
             <label>Name</label>
             <input
@@ -36,9 +35,6 @@ const Form = () => {
               onChange={inputEvent}
               value={name}
             />
-            <small id="emailHelp" className="form-text text-muted">
-              We'll never share your email with anyone else.
-            </small>
           </div>
           {/* <button type="submit" onClick={showName} className="btn btn-primary">
             Submit
@@ -47,6 +43,7 @@ const Form = () => {
             Submit
           </button>
         </form>
+        <p className="mt-5">{onSubmitName} </p>
       </div>
       <div className="col">
         <FormLogin />

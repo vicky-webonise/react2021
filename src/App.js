@@ -1,35 +1,36 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import "./App.scss";
-
 import Home from './Home';
-import HandlingEvents from "./handlingEvents";
-import Hooks from "./Hooks";
-import ComponentExercise from "./component-exercise";
-import CovidUpdate from "./covid-update";
-import SlotMachineGame from "./SlotMachineGame";
-import SimpleCalc from "./SimpleCalc";
-import Greeting from "./Greeting";
-import Netflix from "./netflix";
-import Form from "./form";
-import NavBar from "./Navbar";
-import Error from "./Error";
-import IfElseTernery from "./IfElseTernery";
-import RouteRenderMethod from "./RouteRenderMethod";
-import useParamsHooks from "./HooksuseParams";
-import useParamsHooksTwo from "./HooksuseParams-twoParam";
-import HooksuseLocation from "./HooksuseLocation";
-import HooksuseHistory from "./HooksuseHistory";
-import LiveSearchFilter from "./LiveSearchFilter";
-import WeatherApp from "./WeatherApp";
-import ToDoApp from "./ToDoApp";
-import ToDoAppAdvance from "./ToDoAppAdvance";
-import FilterGallery from "./FilterGallery";
+import HandlingEvents from "./components/handlingEvents/handlingEvents";
+import Hooks from "./components/hooks/Hooks";
+import ComponentExercise from "./components/componentExercise/component-exercise";
+import CovidUpdate from "./components/covidUpdate/covid-update";
+import SlotMachineGame from "./components/SlotMachineGame/SlotMachineGame";
+import SimpleCalc from "./components/SimpleCalculator/SimpleCalc";
+import Greeting from "./components/Greeting/Greeting";
+import Netflix from "./components/netflix/netflix";
+import Form from "./components/form/form";
+import NavBar from "./components/shared/Navbar";
+import Error from "./components/Error/Error";
+import IfElseTernery from "./components/IfElseTernery/IfElseTernery";
+import RouteRenderMethod from "./components/RouteRenderMethod/RouteRenderMethod";
+import useParamsHooks from "./components/hooks/HooksuseParams";
+import useParamsHooksTwo from "./components/hooks/HooksuseParams-twoParam";
+import HooksuseLocation from "./components/hooks/HooksuseLocation";
+import HooksuseHistory from "./components/hooks/HooksuseHistory";
+import LiveSearchFilter from "./components/LiveSearchFilter/LiveSearchFilter";
+import WeatherApp from "./components/WeatherApp/WeatherApp";
+import ToDoApp from "./components/ToDoApp/ToDoApp";
+import ToDoAppAdvance from "./components/ToDoApp/ToDoAppAdvance";
+import FilterGallery from "./components/FilterGallery/FilterGallery";
 
 import HooksComponent from "./components/hooks/HooksComponent";
 import LoginForm from "./components/hooks/LoginForm";
 import HooksUseEffect from "./components/hooks/HooksUseEffect";
-import HookUseEffectApi from "./components/hooks/HooksUseEffectApi";
+import HooksUseEffectApi from "./components/hooks/HooksUseEffectApi";
+import HooksUseReducer from "./components/hooks/HooksUseReducer";
+import HooksUseContext from "./components/hooks/useContext/HooksUseContext";
+import CustomHooks from "./components/hooks/CustomHooks/CustomHooks";
 
 function App() {
   return (
@@ -49,9 +50,12 @@ function App() {
               <Route path="/" component={Home} exact />
               <Route path="/handlingEvents" component={HandlingEvents} />
               <Route path="/hooks" component={Hooks} />
-              <Route path="/hookUseEffectApi" component={HookUseEffectApi} />
-              <Route path="/HooksComponent" component={HooksComponent} />
-              <Route path="/HooksUseEffect" component={HooksUseEffect} />
+              <Route path="/hooksUseEffectApi" component={HooksUseEffectApi} />
+              <Route path="/hooksComponent" component={HooksComponent} />
+              <Route path="/hooksUseEffect" component={HooksUseEffect} />
+              <Route path="/hooksUseReducer" component={HooksUseReducer} />
+              <Route path="/hooksUseContext" component={HooksUseContext} />
+              <Route path="/CustomHooks" component={CustomHooks} />
               <Route path="/form" component={Form} />
               <Route path="/loginForm" component={LoginForm} />
               <Route path="/componentExerciser" component={ComponentExercise} />
@@ -92,8 +96,8 @@ function App() {
                   <RouteRenderMethod name="Vicky" surname="Shinde" age="25" />
                 )}
               /> */}
-              {/* <Route component={Error} /> */}
-              <Redirect to="/" />
+              <Route component={Error} />
+              {/* <Redirect to="/" /> */}
             </Switch>
           </div>
         </div>
