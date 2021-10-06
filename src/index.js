@@ -9,7 +9,7 @@ import "./styles/global.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter >
       <App />
     </BrowserRouter>
   </React.StrictMode>,

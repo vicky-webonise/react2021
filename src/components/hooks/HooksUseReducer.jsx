@@ -9,13 +9,16 @@ const countReducer = (countState, payload) => {
       return countState + 1;
       break;
     case "DECREMENT":
-      return countState - 1;
+      console.log(0 >= countState);
+      if(0 >= countState) {
+        return 0
+      } else {
+        return countState - 1;
+      }
       break;
     default :
     return countState;
   }
-
-  return countState;
 };
 const HooksUseReducer = () => {
 

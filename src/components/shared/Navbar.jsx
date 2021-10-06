@@ -65,6 +65,26 @@ const NavBar = () => {
             exact
             className="nav-link"
             activeClassName="active"
+            to="/testimonial"
+          >
+            Testimonial
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/googleKeepApp"
+          >
+            Google Keep App
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
             to="/form"
           >
             Form

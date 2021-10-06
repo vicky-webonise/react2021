@@ -32,6 +32,9 @@ import HooksUseReducer from "./components/hooks/HooksUseReducer";
 import HooksUseContext from "./components/hooks/useContext/HooksUseContext";
 import CustomHooks from "./components/hooks/CustomHooks/CustomHooks";
 
+import Testimonial from "./components/Testimonial/Testimonial";
+import GoogleKeepApp from "./components/GoogleKeepApp/GoogleKeepApp";
+
 function App() {
   return (
     <div className="pageWrap">
@@ -62,6 +65,8 @@ function App() {
               <Route path="/netflix" component={Netflix} />
               <Route path="/slotMachineGame" component={SlotMachineGame} />
               <Route path="/simpleCalc" component={SimpleCalc} />
+              <Route path="/testimonial" component={Testimonial} />
+              <Route path="/googleKeepApp" component={GoogleKeepApp} />
               <Route
                 path="/greeting"
                 component={() => <Greeting fName="Vicky" lName="Shinde" />}
