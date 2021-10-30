@@ -310,6 +310,48 @@ const NavBar = () => {
             useHistory Hooks
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/user-listing"
+          >
+            User
+          </NavLink>
+          <ul>
+            <li className="nav-item">
+              <NavLink
+                exact
+                className="nav-link"
+                activeClassName="active"
+                to="/user-listing"
+              >
+                User Listing
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                className="nav-link"
+                activeClassName="active"
+                to="/user-add"
+              >
+                User Add
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                className="nav-link"
+                activeClassName="active"
+                to="/user-edit"
+              >
+                User Edit
+              </NavLink>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
   );

@@ -33,7 +33,7 @@ const HooksUseEffect = () => {
       console.log('remove event')
       window.removeEventListener("resize", actualWidth);
     }
-  });
+  }, []);
 
 
   console.log("hi outside");

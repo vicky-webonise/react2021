@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Home from './Home';
 import HandlingEvents from "./components/handlingEvents/handlingEvents";
@@ -34,6 +34,9 @@ import CustomHooks from "./components/hooks/CustomHooks/CustomHooks";
 
 import Testimonial from "./components/Testimonial/Testimonial";
 import GoogleKeepApp from "./components/GoogleKeepApp/GoogleKeepApp";
+import UserListing from "./components/usersCrud/userListing";
+import UserAdd from "./components/usersCrud/userAdd";
+import UserEdit from "./components/usersCrud/userEdit";
 
 function App() {
   return (
@@ -67,6 +70,12 @@ function App() {
               <Route path="/simpleCalc" component={SimpleCalc} />
               <Route path="/testimonial" component={Testimonial} />
               <Route path="/googleKeepApp" component={GoogleKeepApp} />
+
+              <Route path="/user-listing" component={UserListing} />
+              <Route path="/user-add" component={UserAdd} />
+              <Route path="/user-edit/:id" component={UserEdit} />
+
+
               <Route
                 path="/greeting"
                 component={() => <Greeting fName="Vicky" lName="Shinde" />}
