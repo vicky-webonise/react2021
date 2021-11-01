@@ -212,7 +212,7 @@ const UserEdit = () => {
               clsName="btn btn-primary mb-4 mr-4"
             />
             <SubmitButtonWrapped
-              title="back"
+              title="< Back"
               clsName="btn btn-primary mb-4"
               onClick={() => {
                 history.push("/user-listing");

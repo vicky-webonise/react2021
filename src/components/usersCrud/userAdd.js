@@ -203,10 +203,10 @@ const UserAdd = () => {
               clsName="btn btn-primary mb-4 mr-4"
             />
             <SubmitButtonWrapped
-              title="Login"
+              title="< Back"
               clsName="btn btn-primary mb-4"
               onClick={() => {
-                history.push("/login");
+                history.push("/user-listing");
               }}
             />
           </div>

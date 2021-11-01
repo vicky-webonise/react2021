@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router";
 import Loading from "../shared/Loading";
 import { getUsers, deleteUser } from "../../config/api-endpoints";
@@ -33,6 +34,11 @@ const UserListing = () => {
   return (
     <>
       <h2>User Listing</h2>
+      <div>
+        <NavLink exact className="btn btn-primary mb-4" to="/user-add">
+          User Add
+        </NavLink>
+      </div>
       {loading ? (
         <Loading />
       ) : (
