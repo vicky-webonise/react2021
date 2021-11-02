@@ -14,14 +14,14 @@ const UserListing = () => {
 
   const getAllUsers = async () => {
     const response = await getUsers();
-    console.log(response.data);
+    // console.log(response.data);
+    debugger;
     setUsers(response.data);
     setLoading(false);
   }
 
   useEffect(() => {
     getAllUsers();
-    // alert('hi')
   }, []);
 
   const handleDelete =  async (id) => {

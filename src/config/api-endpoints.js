@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const userApi = "http://localhost:5000/Users";
+const postApi = "https://jsonplaceholder.typicode.com/posts";
 
 export const getUsers = async (id) => {
   id = id || '';
@@ -17,4 +18,8 @@ export const editUser = async (id, user) => {
 
 export const deleteUser = async (id) => {
   return await axios.delete(`${userApi}/${id}`);
+}
+
+export const getPost = async () => {
+  return await axios.get(postApi);
 }

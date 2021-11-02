@@ -24,6 +24,16 @@ const NavBar = () => {
             exact
             className="nav-link"
             activeClassName="active"
+            to="/posts"
+          >
+            Posts Pagination
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
             to="/liveSearchFilter"
           >
             Live Search Filter

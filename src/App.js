@@ -37,6 +37,7 @@ import GoogleKeepApp from "./components/GoogleKeepApp/GoogleKeepApp";
 import UserListing from "./components/usersCrud/userListing";
 import UserAdd from "./components/usersCrud/userAdd";
 import UserEdit from "./components/usersCrud/userEdit";
+import Posts from "./components/pagination/posts";
 
 function App() {
   return (
@@ -71,10 +72,11 @@ function App() {
               <Route path="/testimonial" component={Testimonial} />
               <Route path="/googleKeepApp" component={GoogleKeepApp} />
 
+              <Route path="/posts" component={Posts} />
+
               <Route path="/user-listing" component={UserListing} />
               <Route path="/user-add" component={UserAdd} />
               <Route path="/user-edit/:id" component={UserEdit} />
-
 
               <Route
                 path="/greeting"
