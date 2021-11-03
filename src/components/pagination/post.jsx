@@ -8,15 +8,8 @@ const Post = ({posts, loader}) => {
     <>
       {posts.map((post) => {
         return (
-          <div className="mb-4" key={post.id}>
-            <div className="card bg-info text-left">
-              <div className="card-body">
-                <b>
-                  {post.id} {post.title}
-                </b>
-                {/* <p>{post.body}</p> */}
-              </div>
-            </div>
+          <div className="list-group-item text-success text-left" key={post.id}>
+            [{post.id}] {post.title}
           </div>
         );
       })}

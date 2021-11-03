@@ -7,14 +7,18 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [loader, setLoader] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(20);
-  const [isPrevDisabled, setIsPrevDisabled] = useState(false);
-  const [isNextDisabled, setIsNextDisabled] = useState(false);
+  const [postsPerPage, setPostsPerPage] = useState(5);
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPost = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // pagination limit
+  const [pageNumberLimit, setPageNumberLimit] = useState(5);
+  const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
+  const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
+
 
   const getAllPost = async () => {
     setLoader(true);
@@ -30,33 +34,27 @@ const Posts = () => {
   };
 
   const paginatePrev = (e, pageNumber) => {
-    setIsNextDisabled(false);
     e.preventDefault();
-    // console.log("pageNumber" + pageNumber);
-    if (pageNumber === 1) {
-      setIsPrevDisabled(true);
-      setCurrentPage(1);
-      console.log(isPrevDisabled);
-    } else {
-      setIsPrevDisabled(false);
-      setCurrentPage(pageNumber - 1);
-      console.log(isPrevDisabled);
+    setCurrentPage(pageNumber - 1);
+    if ((currentPage -1) % pageNumberLimit == 0) {
+      setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
+      setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
     }
   };
 
   const paginateNext = (e, pageNumber) => {
-    setIsPrevDisabled(false);
-    const totalPageCount = posts.length / postsPerPage;
-    // console.log(totalPageCount);
     e.preventDefault();
-    if (pageNumber === totalPageCount) {
-      setIsNextDisabled(true);
-      setCurrentPage(totalPageCount);
-    } else {
-      setIsNextDisabled(false);
-      setCurrentPage(pageNumber + 1);
+    setCurrentPage(pageNumber + 1);
+    if (currentPage + 1 > maxPageNumberLimit) {
+      setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
+      setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
     }
   };
+
+  const handleLoadMore = () => {
+    setPostsPerPage(postsPerPage + 5);
+    setCurrentPage(1);
+  }
 
   useEffect(() => {
     getAllPost();
@@ -70,22 +68,26 @@ const Posts = () => {
         totalPosts={posts.length}
         paginate={paginate}
         currentPage={currentPage}
-        isPrevDisabled={isPrevDisabled}
-        isNextDisabled={isNextDisabled}
         paginatePrev={paginatePrev}
         paginateNext={paginateNext}
+        pageNumberLimit={pageNumberLimit}
+        maxPageNumberLimit={maxPageNumberLimit}
+        minPageNumberLimit={minPageNumberLimit}
       />
-      <Post posts={currentPost} loader={loader} />
-      <Pagination
+      <ul className="list-group mb-4">
+        <Post posts={currentPost} loader={loader} />
+      </ul>
+      {/* <Pagination
         postsPerPage={postsPerPage}
         totalPosts={posts.length}
         paginate={paginate}
         currentPage={currentPage}
-        isPrevDisabled={isPrevDisabled}
-        isNextDisabled={isNextDisabled}
         paginatePrev={paginatePrev}
         paginateNext={paginateNext}
-      />
+      /> */}
+      <button onClick={handleLoadMore} className="btn btn-success">
+        LOAD MORE
+      </button>
     </>
   );
 };

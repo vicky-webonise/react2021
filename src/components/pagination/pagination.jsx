@@ -7,6 +7,9 @@ const Pagination = ({
   isPrevDisabled,
   isNextDisabled,
   paginateNext,
+  pageNumberLimit,
+  maxPageNumberLimit,
+  minPageNumberLimit,
 }) => {
   const pageNumbers = [];
 
@@ -16,10 +19,46 @@ const Pagination = ({
     pageNumbers.push(i);
   }
 
+  let pageIncrementBtn = null;
+
+  if (pageNumbers.length > maxPageNumberLimit) {
+    pageIncrementBtn = (
+      <li className="page-item">
+        <a
+          className="page-link"
+          onClick={(e) => paginateNext(e, currentPage)}
+          href={`posts/${currentPage}`}
+        >
+          ...
+        </a>
+      </li>
+    );
+  }
+
+  let pageDecrementBtn = null;
+
+  if(minPageNumberLimit >= 1 ) {
+    pageDecrementBtn = (
+      <li className="page-item">
+        <a
+          className="page-link"
+          onClick={(e) => paginatePrev(e, currentPage)}
+          href={`posts/${currentPage}`}
+        >
+          ...
+        </a>
+      </li>
+    );
+  }
+
   return (
     <nav aria-label="Page navigation example">
       <ul className="pagination">
-        <li className={`page-item ${isPrevDisabled ? "disabled" : ""}`}>
+        <li
+          className={`page-item ${
+            currentPage === pageNumbers[0] ? "disabled" : ""
+          }`}
+        >
           <a
             className="page-link"
             onClick={(e) => paginatePrev(e, currentPage)}
@@ -28,21 +67,33 @@ const Pagination = ({
             Previous
           </a>
         </li>
-        {pageNumbers.map((number) => (
-          <li
-            key={number}
-            className={`page-item ${currentPage === number ? "active" : ""}`}
-          >
-            <a
-              className="page-link"
-              onClick={(e) => paginate(e, number)}
-              href={`posts/${number}`}
-            >
-              {number}
-            </a>
-          </li>
-        ))}
-        <li className={`page-item ${isNextDisabled ? "disabled" : ""}`}>
+        {pageDecrementBtn}
+        {pageNumbers.map((number) => {
+          if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
+            return (
+              <li
+                key={number}
+                className={`page-item ${
+                  currentPage === number ? "active" : ""
+                }`}
+              >
+                <a
+                  className="page-link"
+                  onClick={(e) => paginate(e, number)}
+                  href={`posts/${number}`}
+                >
+                  {number}
+                </a>
+              </li>
+            );
+          }
+        })}
+        {pageIncrementBtn}
+        <li
+          className={`page-item ${
+            currentPage === pageNumbers[pageNumbers.length -1] ? "disabled" : ""
+          }`}
+        >
           <a
             className="page-link"
             onClick={(e) => paginateNext(e, currentPage)}
