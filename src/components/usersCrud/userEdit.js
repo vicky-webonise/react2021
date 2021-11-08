@@ -209,11 +209,11 @@ const UserEdit = () => {
             <SubmitButtonWrapped
               disabled={!isDisabled}
               title="Submit"
-              clsName="btn btn-primary mb-4 mr-4"
+              clsName="btn btn-warning mb-4 mr-4"
             />
             <SubmitButtonWrapped
               title="< Back"
-              clsName="btn btn-primary mb-4"
+              clsName="btn btn-secondary mb-4"
               onClick={() => {
                 history.push("/user-listing");
               }}

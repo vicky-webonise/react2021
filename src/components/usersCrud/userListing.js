@@ -66,7 +66,7 @@ const UserListing = () => {
                     <SubmitButtonWrapped
                       // disabled={!isDisabled}
                       title="Edit"
-                      clsName="btn btn-danger ml-1"
+                      clsName="btn btn-warning btn-sm ml-1"
                       onClick={() => {
                         history.push(`/user-edit/${item.id}`);
                       }}
@@ -74,7 +74,7 @@ const UserListing = () => {
                     <SubmitButtonWrapped
                       // disabled={!isDisabled}
                       title="X"
-                      clsName="btn btn-danger ml-1"
+                      clsName="btn btn-danger btn-sm ml-1"
                       onClick={() => handleDelete(item.id)}
                     />
                   </td>
