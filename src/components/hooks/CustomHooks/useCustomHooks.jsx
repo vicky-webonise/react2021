@@ -11,21 +11,21 @@ const useDocTitle = (count) => {
   }, [count]);
 }
 
-const useWindowWidth = (value) => {
-  // cleanup function
-  useEffect(() => {
-    console.log("add event");
-    window.addEventListener("resize", () => {
-      value = window.innerWidth;
-    });
-    return () => {
-      console.log("remove event");
-      window.removeEventListener("resize", () => {
-        value = window.innerWidth;
-      });
-    };
-  });
-};
+// const useWindowWidth = (value) => {
+//   // cleanup function
+//   useEffect(() => {
+//     console.log("add event");
+//     window.addEventListener("resize", () => {
+//       value = window.innerWidth;
+//     });
+//     return () => {
+//       console.log("remove event");
+//       window.removeEventListener("resize", () => {
+//         value = window.innerWidth;
+//       });
+//     };
+//   });
+// };
 
-export { useDocTitle, useWindowWidth };
+export { useDocTitle };
 

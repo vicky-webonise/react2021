@@ -23,20 +23,19 @@ const HooksUseEffect = () => {
     setCount(count + 1);
   }
 
-  const actualWidth = () => {
-    setWindowWidth(window.innerWidth);
-    console.log(windowWidth);
-  }
-
   // cleanup function
   useEffect(() => {
-    console.log('add event')
+    const actualWidth = () => {
+      setWindowWidth(window.innerWidth);
+      console.log(windowWidth);
+    };
+    console.log("add event");
     window.addEventListener("resize", actualWidth);
     return () => {
-      console.log('remove event')
+      console.log("remove event");
       window.removeEventListener("resize", actualWidth);
-    }
-  }, []);
+    };
+  }, [windowWidth]);
 
   console.log("hi outside");
 

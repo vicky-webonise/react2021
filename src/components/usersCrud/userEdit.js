@@ -32,14 +32,14 @@ const UserEdit = () => {
 
   const [isDisabled, setIsDisabled] = useState(false);
 
-  const loadUserData = async () => {
-    const response = await getUsers(id);
-    setUserObj(response.data);
-  };
 
   useEffect(() => {
+    const loadUserData = async () => {
+      const response = await getUsers(id);
+      setUserObj(response.data);
+    };
     loadUserData();
-  }, []);
+  }, [id]);
 
   const onNameChange = (name) => {
     if (name.length < 4) {
