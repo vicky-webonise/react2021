@@ -17,8 +17,11 @@ const HooksUseEffect = () => {
     console.log('another useEffect one time call')
   }, []);
 
-
   const [windowWidth, setWindowWidth] = useState(window.screen.width);
+
+  const incCount = () => {
+    setCount(count + 1);
+  }
 
   const actualWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -35,12 +38,8 @@ const HooksUseEffect = () => {
     }
   }, []);
 
-
   console.log("hi outside");
 
-  const incCount = () => {
-    setCount(count + 1);
-  }
   return (
     <div>
       <h2>Use Effect</h2>

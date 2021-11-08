@@ -39,7 +39,7 @@ const HooksComponent = () => {
 
   // Short Circuit Evaluation - Logical && and || Operators
 
-  const [shortCircuit, setShortCircuit] = useState('');
+  const [shortCircuit] = useState('');
 
   return (
     <div>

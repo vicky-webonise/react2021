@@ -27,19 +27,19 @@ const UserEdit = () => {
     isPasswordValid: false,
   });
 
-  useEffect(() => {
-    loadUserData();
-  }, []);
+  const { isNameValid, isEmailValid, isContactValid, isPasswordValid } =
+  isInputValid;
+
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const loadUserData = async () => {
     const response = await getUsers(id);
     setUserObj(response.data);
   };
 
-  const { isNameValid, isEmailValid, isContactValid, isPasswordValid } =
-    isInputValid;
-
-  const [isDisabled, setIsDisabled] = useState(false);
+  useEffect(() => {
+    loadUserData();
+  }, []);
 
   const onNameChange = (name) => {
     if (name.length < 4) {

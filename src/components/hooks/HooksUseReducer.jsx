@@ -7,7 +7,7 @@ const countReducer = (countState, payload) => {
   switch (payload.type) {
     case "INCREMENT":
       return countState + 1;
-      break;
+      // break;
     case "DECREMENT":
       console.log(0 >= countState);
       if(0 >= countState) {
@@ -15,7 +15,7 @@ const countReducer = (countState, payload) => {
       } else {
         return countState - 1;
       }
-      break;
+      // break;
     default :
     return countState;
   }

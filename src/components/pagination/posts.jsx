@@ -7,7 +7,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [loader, setLoader] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const [postsPerPage, setPostsPerPage] = useState(30);
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -15,7 +15,7 @@ const Posts = () => {
   const currentPost = posts.slice(indexOfFirstPost, indexOfLastPost);
 
   // pagination limit
-  const [pageNumberLimit, setPageNumberLimit] = useState(5);
+  const [pageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
@@ -36,7 +36,7 @@ const Posts = () => {
   const paginatePrev = (e, pageNumber) => {
     e.preventDefault();
     setCurrentPage(pageNumber - 1);
-    if ((currentPage -1) % pageNumberLimit == 0) {
+    if ((currentPage -1) % pageNumberLimit === 0) {
       setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
       setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
     }

@@ -15,7 +15,7 @@ const UserListing = () => {
   const getAllUsers = async () => {
     const response = await getUsers();
     // console.log(response.data);
-    debugger;
+    // debugger;
     setUsers(response.data);
     setLoading(false);
   }

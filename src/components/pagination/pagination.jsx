@@ -87,6 +87,7 @@ const Pagination = ({
               </li>
             );
           }
+          return null;
         })}
         {pageIncrementBtn}
         <li
