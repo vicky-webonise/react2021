@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
-import Home from './Home';
+import Home from "./Home";
 import HandlingEvents from "./components/handlingEvents/handlingEvents";
 import Hooks from "./components/hooks/Hooks";
 import ComponentExercise from "./components/componentExercise/component-exercise";
@@ -38,6 +38,8 @@ import UserListing from "./components/usersCrud/userListing";
 import UserAdd from "./components/usersCrud/userAdd";
 import UserEdit from "./components/usersCrud/userEdit";
 import Posts from "./components/pagination/posts";
+import Slider from "./components/Slider/Slider";
+import CustomHook from "./components/customHooks";
 
 function App() {
   return (
@@ -49,6 +51,9 @@ function App() {
         <div className="col-10">
           <div className="section">
             <Switch>
+              <Route path="/slider" component={Slider} />
+
+              <Route path="/customHooks" component={CustomHook} />
               <Route path="/covidUpdate" component={CovidUpdate} />
               <Route path="/weatherApp" component={WeatherApp} />
               <Route path="/todoApp" component={ToDoApp} />

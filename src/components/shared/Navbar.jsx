@@ -24,6 +24,26 @@ const NavBar = () => {
             exact
             className="nav-link"
             activeClassName="active"
+            to="/slider"
+          >
+            Slider
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
+            to="/customHooks"
+          >
+            customHooks
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            exact
+            className="nav-link"
+            activeClassName="active"
             to="/posts"
           >
             Posts Pagination
